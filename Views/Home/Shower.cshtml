@@ -1,0 +1,39 @@
+﻿v class="mp_cat">
+<!-- Задание полей для таблицы -->
+<table width=100%>
+    <tr>
+        <td class="td_name"> Название </td>
+        <td class="td_ID"> Артикул </td>
+        <td class="td_price"> цена </td>
+    </tr>
+</table>
+<!--Таблица каталога-->
+<div class="mp_cat_over">
+    <table id="mp_cat_list" width=100%>
+        @{int i = 0;}
+        @foreach (Product p in Model)
+        {
+            <tr>
+                <td> <a asp-area="" asp-controller="Home" asp-action="Shower(@i)"> @p.name </a></td>
+                <td>@p.id</td>
+                <td>@p.price</td>
+            </tr>
+            i++;
+        }
+    </table>
+</div>
+    </div>
+
+<!-- Изображение товара -->
+<div class="mp_img" id="mp_img">
+    <img src="@ViewBag.img" height=560 width=1000>
+</div>
+<!-- Описание товара -->
+<div class="mp_about">
+    <div id="ab_name" class="ab_name"> @ViewBag.name </div>
+    <div id="ab_ammo" class="ab_ammo"> @ViewBag.ammount </div>
+    <div id="ab_desc" class="ab_desc"> @ViewBag.desc </div>
+</div>
+<!-- Кнопка добавления товара -->
+<div class="mp_com" onclick="addtocart(cur)"> Добавить в корзину </div>
+</div>

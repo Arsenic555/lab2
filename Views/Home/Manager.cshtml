@@ -1,0 +1,34 @@
+﻿@using WebApplication1.Models
+@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Менеджер каталога";
+}
+
+<div>
+    <table border="2">
+        <tr>
+            <td> Удалить </td>
+            <td> Имя </td>
+            <td> Артикул </td>
+            <td> Описание </td>
+            <td> Цена </td>
+            <td> Количество </td>
+            <td> путь к картинке</td>
+        </tr>
+        @foreach (Product p in Model)
+        {
+    <tr>
+            <td>X</td>
+            <td>@p.name</td>
+            <td>@p.id</td>
+            <td>@p.desc</td>
+            <td>@p.price</td>
+            <td>@p.ammount</td>
+            <td>@p.img</td>
+    </tr>
+        }
+    </table>
+    <br>
+    <a asp-page="/NewProduct"> --- Чтобы добавить товар нажмите сюда --- </a>
+
+</div>

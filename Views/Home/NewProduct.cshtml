@@ -1,0 +1,45 @@
+﻿@using WebApplication1.Models
+@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Конструктор";
+}
+
+<div>
+    <table>
+        <tr>
+            <td> Название товара </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td> Описание товара </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td> Цена товара </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td> Количество товара </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td> Путь к фотографии товара </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td> Артикул товара: </td>
+            <td> 000000 </td>
+        </tr>
+    </table>
+    <form> <button> Добавить в каталог </button> </form>
+</div>
